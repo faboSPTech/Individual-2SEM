@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro Funcionario | GreenEye</title>
+
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../assets/img/olhoolho.png" rel="icon">
+  <link href="../assets/img/olhoolho.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../assets/css/style-cadastros.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <!-- START CADASTRO FUNCIONARIO -->
+  <div class="content">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <div class="box-login">
+      <a href="desenvolvedor.html">
+        <img id="img-back-pages" src="../assets/img/login_cadastro/back_icon_green.png">Voltar</a>
+        <img src="../assets/img/olhoolho.png" width="90px" id="img-between">
+      <!-- <a href="cadMaquina.html">Próximo<img id="img-next-pages" src="../assets/img/login_cadastro/next_icon_green.png"></a> -->
+
+      <div class="wrapper">
+        <div class="title-text">
+
+          <div class="title cadEmpresa">
+            Cadastro Usuários
+          </div>
+        </div>
+        <div class="form-container">
+          <div class="form-inner">
+            <form onsubmit="return false" action="#" class="nome da empresa">
+              <div class="field">
+                <input id="logname" type="text" placeholder="Nome">
+              </div>
+              <div class="field">
+                <input id="logemail" type="text" placeholder="meuemail@greeneye.com">
+              </div>
+              <div class="field">
+                <input id="logsenha" type="password" placeholder="******">
+              </div>
+              <div class="field">
+                <input id="logempresaid" type="number" placeholder="Id da sua empresa">
+              </div>
+                <select class="field" name="logpermissoes" id="logpermissoes">
+                  <option value="">Selecione o cargo</option>
+                  <option id="fkPerfil" value="111">Administrador</option>
+                  <option id="fkPerfil" value="222">Funcionario</option>
+                  <option id="fkPerfil" value="333">DEV</option>
+                </select>
+
+              <div class="field btn2">
+                <div class="btn-layer" style="color:#5c9f24"></div>
+                CADASTRAR
+                <button class="btn-layer2" onclick="cadastrar()">➙</button>
+                <!-- <input id="" onclick="logar()"> -->
+              </div>
+            </form>
+            <!-- <input type="text" placeholder="Email" required>
+              </div>
+              <div class="field">
+                <input type="password" placeholder="Senha" required>
+              </div>
+              <div class="field">
+                <input type="password" placeholder="Confirmação de senha" required> -->
+          </div>
+          <!-- <div class="field btn">
+                <div class="btn-layer"></div>
+                <input type="submit" value="Cadastrar"> -->
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script>
+    const loginText = document.querySelector(".title-text .login");
+    const loginForm = document.querySelector("form.login");
+    const loginBtn = document.querySelector("label.login");
+    const signupBtn = document.querySelector("label.signup");
+    const signupLink = document.querySelector("form .signup-link a");
+    // signupBtn.onclick = () => {
+    //   loginForm.style.marginLeft = "-50%";
+    //   loginText.style.marginLeft = "-50%";
+    // };
+    // loginBtn.onclick = () => {
+    //   loginForm.style.marginLeft = "0%";
+    //   loginText.style.marginLeft = "0%";
+    // };
+
+    // signupLink.onclick = () => {
+    //   signupBtn.click();
+    //   return false;
+    // };
+  </script>
+  </div>
+  </div>
+  </div>
+  <!-- link: https://codepen.io/jando132456/pen/JjLZXYK -->
+  <!-- END LOGIN -->
+
+  <!-- Vendor JS Files -->
+  <script src="../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../assets/js/main.js"></script>
+</body>
+
+
+</html>
+
+<!-- <script src="../assets/js/redirecionamento.js"></script> -->
+
+<script>
+  	// let girar1 = girar.value;
+
+    function cadastrar() {
+		var logName = logname.value;
+		var logEmail = logemail.value;
+		var logSenha = logsenha.value;
+		var logEmpresaId = logempresaid.value;
+		var logPermissoes = logpermissoes.value;
+	
+
+		if (logName == "" || logEmail == "" || logSenha == "" || logEmpresaId == "" || logPermissoes == "" ) {
+			alert("Informe os dados corretamente!");
+			return false;
+		}
+		
+
+			console.log("INICIANDO O FETCH");
+			// Enviando o valor da nova input
+			fetch("/usuarios/cadUsuarios", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json"
+				},
+				body: JSON.stringify({
+					// crie um atributo que recebe o valor recuperado aqui
+					// Agora vá para o arquivo routes/usuario.js
+					lognameServer: logName,
+					logemailServer: logEmail,
+					logsenhaServer: logSenha,
+					logEmpresaIdServer: logEmpresaId,
+					logpermissoesServer: logPermissoes
+				})
+			}).then(function (resposta) {
+				console.log("entrei no fetch");
+				console.log("resposta: ", resposta);
+
+				if (resposta.ok) {
+                alert("Cadastro realizado com sucesso!");
+					function girar() {
+						girar1
+					}
+				} else {
+					alert("Houve um erro ao tentar realizar o cadastro!");
+				}
+			}).catch(function (resposta) {
+				console.log(`#ERRO: ${resposta}`);
+
+			});
+
+			return false;
+		}
+
+</script>

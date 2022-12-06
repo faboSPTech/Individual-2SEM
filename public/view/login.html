@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+
+<head>
+  <meta charset="UTF-8">
+  <title>GreenEye - Login</title>
+
+  <!-- <script src="./js/funcoes.js"></script> -->
+
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../assets/img/olhoolho.png" rel="icon">
+  <link href="../assets/img/olhoolho.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../assets/css/style-login.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <!-- START LOGIN -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <div class="content">
+    <div class="box-login">
+
+      <a href="index.html">
+        <img id="img-back" src="../assets/img/login_cadastro/back_icon_green.png"></a>
+
+      <div class="wrapper">
+        <div class="title-text">
+
+          <div class="title login">
+            Login
+          </div>
+          <div class="title signup">
+            Registrar-se
+          </div>
+        </div>
+        <div class="form-container">
+          <div class="slide-controls">
+            <input type="radio" name="slide" id="login">
+            <input type="radio" name="slide" id="signup">
+            <label for="login" class="slide login">Login</label>
+            <label for="signup" class="slide signup">Cadastro</label>
+            <div class="slider-tab"></div>
+          </div>
+          <div class="form-inner">
+            <form action="#" onsubmit="return false" class="login">
+              <div class="field">
+                <input for="login" id="logemail" type="text" placeholder="E-mail" required>
+              </div>
+              <div class="field">
+                <input for="login" id="logpass" type="password" placeholder="******" required>
+              </div>
+              <div class="pass-link">
+                Máximo de 10 caracteres
+              </div>
+              <select class="field" name="logpermissoes" id="logpermissoes">
+                <option value="">Selecione o cargo</option>
+                <option id="fkPerfil" value="111">Administrador</option>
+                <option id="fkPerfil" value="222">Funcionario</option>
+                <option id="fkPerfil" value="333">DEV</option>
+              </select>
+              <br>
+              <!-- <div class="field btn2">
+                <div class="btn-layer"></div>
+                LOGAR
+                <button class="btn-layer2" id="loginButton" onclick="logar()">➙</button>
+                <input id="" onclick="logar()">
+              </div> -->
+              <div class="field btn2" style="color:#5c9f24;">
+                <div class="btn-layer"></div>
+                LOGAR
+                <button class="btn-layer2" id="logginButton" onclick="logar()">➙</button>
+              </div>
+              <!-- <div class="field btn">
+                <div class="btn-layer"><button id="loginButton">Acessar</button></div>
+                <div class="btn-layer"></div>
+              </div> -->
+              <div class="signup-link">
+                Não possui conta? <a href="index.html#contact">Clique aqui!</a>
+              </div>
+            </form>
+            <form action="#" class="signup">
+              <div class="field">
+                <h6>Para cadastrar sua empresa, entre em <br> contato com nossa equipe.
+                  <a href="index.html#contact" id="link-contato">Saiba Mais</a>
+                </h6>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <!-- link: https://codepen.io/jando132456/pen/JjLZXYK -->
+  <!-- END LOGIN -->
+
+  <!-- Vendor JS Files -->
+  <script src="../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../assets/js/main.js"></script>
+  <script src="../js/funcoes.js"></script>
+</body>
+
+</html>
+<!-- <script src="../assets/js/redirecionamento.js"></script> -->
+
+<script>
+  // let girar1 = girar.value
+
+  const loginText = document.querySelector(".title-text .login");
+  const loginForm = document.querySelector("form.login");
+  const loginBtn = document.querySelector("label.login");
+  const signupBtn = document.querySelector("label.signup");
+  const signupLink = document.querySelector("form .signup-link a");
+  const loginButton = document.getElementById('form .btn input');
+  signupBtn.onclick = (() => {
+    loginForm.style.marginLeft = "-50%";
+    loginText.style.marginLeft = "-50%";
+  });
+  loginBtn.onclick = (() => {
+    loginForm.style.marginLeft = "0%";
+    loginText.style.marginLeft = "0%";
+  });
+  //  signupLink.onclick = (()=>{
+  //    signupBtn.click()
+  //    return false;
+  //  });
+  // loginButton.onclick= (()=>{
+
+  function logar() {
+    // aguardar();
+
+    console.log("opa");
+
+    var logEmail = logemail.value;
+    var logPass = logpass.value;
+    var logPermissoes = logpermissoes.value;
+
+    // var loginButton = document.getElementById('login');
+
+    // TODO: VERIFICAR AS VALIDAÇÕES QUE ELES ESTÃO APRENDENDO EM ALGORITMOS 
+    if (logEmail == "" || logPass == "" || logPermissoes == "") {
+      alert("Seus dados não coferem!");
+      return false;
+    }
+
+    // console.log("FORM LOGIN: ", logemail);
+    // console.log("FORM SENHA: ", logpass);
+    // console.log("FORM USUARIO: ", logpermissoes);
+
+
+    fetch("/usuarios/autenticar", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        logemailServer: logEmail,
+        logpassServer: logPass,
+        logpermissoesServer: logPermissoes
+      })
+    }).then(function (resposta) {
+      console.log("ESTOU NO THEN DO entrar()!")
+
+      if (resposta.ok) {
+        console.log(resposta);
+
+        resposta.json().then(json => {
+          console.log(json);
+          console.log(JSON.stringify(json));
+
+          sessionStorage.logemail = json.email;
+          sessionStorage.logpass = json.senha;
+          sessionStorage.logpermissoes = json.fkPerfil;
+
+          
+
+          setTimeout(function () {
+            if (logPermissoes == "111") {
+              window.location = "./relatorios.html";
+            } else if (logPermissoes == "222") {
+              window.location = "./dashFuncionario.html";
+            } else if (logPermissoes == "333") {
+              window.location = "./desenvolvedor.html";
+            } else {
+              window.location = "./";
+            }
+          })
+        })
+      }
+
+    }).catch(function (erro) {
+      console.log(erro);
+    })
+
+    return false;
+  };
+
+  function girar() {
+    girar1
+  }
+
+
+  function sumirMensagem() {
+    cardErro.style.display = "none"
+  }
+
+</script>
