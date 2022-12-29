@@ -49,9 +49,15 @@ try:
         cnxn = pyodbc.connect(driver='{ODBC Driver 18 for SQL Server}', host='greeneye.database.windows.net',
                         database='greeneye', user='GreeneyeADM', password='Greeneye123@')
         print("Conectei no banco! (Azure)")
+<<<<<<< HEAD
         # db_connection = mysql.connector.connect(
         #         host='localhost', user='Gabes', password='urubu100', database='greeneye')
         # print("Conectei no banco! (Local)")
+=======
+        db_connection = mysql.connector.connect(
+                host='localhost', user='root', password='Lucas0708', database='greeneye')
+        print("Conectei no banco! (Local)")
+>>>>>>> bddfacc3af14a5e406667cb4deb0d8b3d2101f51
 except mysql.connector.Error as error:
         if error.errno == errorcode.ER_BAD_DB_ERROR:
                 print("Não encontrei o banco")
@@ -128,6 +134,7 @@ while (True):
                         data = loads(response.data.decode('utf-8'))
 
                         #OPEN HARDWARE MONITOR
+<<<<<<< HEAD
                         # MAQUINA PRINCIPAL
                         temp_min = conversor(data['Children'][0]['Children'][1]['Children'][1]['Children'][0]['Min'])
                         temp_value = conversor(data['Children'][0]['Children'][1]['Children'][1]['Children'][0]['Value'])
@@ -174,11 +181,17 @@ while (True):
 
                         if temp_max3 > 100:
                             temp_max3 = 100
+=======
+                        temp_min = conversor(data['Children'][0]['Children'][1]['Children'][1]['Children'][4]['Min'])
+                        temp_value = conversor(data['Children'][0]['Children'][1]['Children'][1]['Children'][4]['Value'])
+                        temp_max = conversor(data['Children'][0]['Children'][1]['Children'][1]['Children'][4]['Max'])
+>>>>>>> bddfacc3af14a5e406667cb4deb0d8b3d2101f51
 
                         # print("Temperatura minima:", temp_min)
                         # print("Temperatura média:", temp_value)
                         # print("Temperatura maxima:", temp_max)
 
+<<<<<<< HEAD
                         data = datetime.now().strftime('%Y-%m-%d')
                         hora = datetime.now().strftime('%H:%M:%S')
 
@@ -199,12 +212,21 @@ while (True):
                         cursorAzure5 = cnxn.cursor()
 
                         # -----------------------------------------AZURE--------------------------------------------------
+=======
+                        #CURSOR
+                        cursorLocal = db_connection.cursor()
+                        cursorLocal2 = db_connection.cursor()
+                        cursorAzure = cnxn.cursor()
+                        cursorAzure2 = cnxn.cursor()
+                        
+>>>>>>> bddfacc3af14a5e406667cb4deb0d8b3d2101f51
 
                         #AZURE
                         fkMaquina = 50000
                         sql = f"INSERT INTO Leitura (fkMaquina, sistemaOperacional, cpuMedia, qtdProcessador, ramTotal, ramUso,  ramUsoPercent, discoTotal, discoUso, discoLivre, discoPercent, dataHora) VALUES ({fkMaquina},'{sistemaoperacional}', {porcentagem_cpu}, {processador}, {ramTotal}, {ramUso},{ram.percent},{discoTotal},{discoUso},{discoLivre},{disk.percent},(CURRENT_TIMESTAMP))" 
                         cursorAzure.execute(sql)
                         
+<<<<<<< HEAD
                         #TEMPERATURA AZURE PRINCIPAL
                         fkMaquina = 50000
                         sqltemp = (f"INSERT INTO Temperatura (fkMaquina, tempMin, tempValor, tempMax, data_agr, hora_agr ) VALUES (?,?,?,?,?,?)")
@@ -259,11 +281,36 @@ while (True):
                         # sqltemp = (f"INSERT INTO Temperatura (fkMaquina, tempMin, tempValor, tempMax, data_agr, hora_agr ) VALUES (%s,%s,%s,%s,%s,%s)")
                         # values = (fkMaquina, temp_min3, temp_value3, temp_max3, data, hora)
                         # cursorLocal5.execute(sqltemp, values) 
+=======
+                        #TEMPERATURA AZURE
+                        sqltemp = (f"INSERT INTO Temperatura (tempMin, tempValor, tempMax, data_agr, hora_agr ) VALUES (?,?,?,?,?)")
+                        data = datetime.now().strftime('%Y-%m-%d')
+                        hora = datetime.now().strftime('%H:%M:%S')
+                        values = (temp_min, temp_value, temp_max, data, hora)
+                        cursorAzure2.execute(sqltemp, values)
+
+                        #LOCAL
+                        fkMaquina = 50000
+                        sql = f"INSERT INTO Leitura (fkMaquina, sistemaOperacional, cpuMedia, qtdProcessador, ramTotal, ramUso,  ramUsoPercent, discoTotal, discoUso, discoLivre, discoPercent, dataHora) VALUES ({fkMaquina},'{sistemaoperacional}', {porcentagem_cpu}, {processador}, {ramTotal}, {ramUso},{ram.percent},{discoTotal},{discoUso},{discoLivre},{disk.percent},(CURRENT_TIMESTAMP))"
+                        cursorLocal.execute(sql)
+
+                        #TEMPERATURA LOCAL
+                        sqltemp = (f"INSERT INTO Temperatura (tempMin, tempValor, tempMax, data_agr, hora_agr ) VALUES (%s,%s,%s,%s,%s)")
+                        data = datetime.now().strftime('%Y-%m-%d')
+                        hora = datetime.now().strftime('%H:%M:%S')
+                        values = (temp_min, temp_value, temp_max, data, hora)
+                        cursorLocal2.execute(sqltemp, values) 
+>>>>>>> bddfacc3af14a5e406667cb4deb0d8b3d2101f51
 
                         print("\n")
                         print(cursorAzure.rowcount, "Inserindo no banco (Azure).")
                         cnxn.commit()
 
+<<<<<<< HEAD
                         # print(cursorLocal.rowcount, "Inserindo no banco (Local).")
                         # db_connection.commit()
+=======
+                        print(cursorLocal.rowcount, "Inserindo no banco (Local).")
+                        db_connection.commit()
+>>>>>>> bddfacc3af14a5e406667cb4deb0d8b3d2101f51
                         time.sleep(1)

@@ -9,6 +9,7 @@
     "express": "^4.17.1",
     "mssql": "^7.1.3",
     "mysql2": "^2.2.5",
+<<<<<<< HEAD
     "needs": "^1.0.4",
     "nodemon": "^2.0.7",
     "path": "^0.12.7",
@@ -17,6 +18,10 @@
     "rscript": "^0.1.4",
     "shell": "^0.5.1",
     "shelljs": "^0.8.5",
+=======
+    "nodemon": "^2.0.7",
+    "path": "^0.12.7",
+>>>>>>> bddfacc3af14a5e406667cb4deb0d8b3d2101f51
     "tedious": "^15.1.0"
   },
   "scripts": {
@@ -34,8 +39,12 @@
   "bugs": {
     "url": "https://github.com/Burlina/GREENEYE-OFICIAL/issues"
   },
+<<<<<<< HEAD
   "homepage": "https://github.com/Burlina/GREENEYE-OFICIAL#readme",
   "devDependencies": {
     "r-integration": "^2.4.0"
   }
+=======
+  "homepage": "https://github.com/Burlina/GREENEYE-OFICIAL#readme"
+>>>>>>> bddfacc3af14a5e406667cb4deb0d8b3d2101f51
 }

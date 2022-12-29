@@ -12,9 +12,15 @@ try:
         cnxn = pyodbc.connect(driver='{SQL Server}', host='greeneye.database.windows.net',
                         database='greeneye', user='GreeneyeADM', password='Greeneye123@')
         print("Conectei no banco! (Azure)")
+<<<<<<< HEAD
         # db_connection = mysql.connector.connect(
         #         host='localhost', user='aluno', password='sptech', database='greeneye')
         # print("Conectei no banco! (Local)")
+=======
+        db_connection = mysql.connector.connect(
+                host='localhost', user='aluno', password='sptech', database='greeneye')
+        print("Conectei no banco! (Local)")
+>>>>>>> bddfacc3af14a5e406667cb4deb0d8b3d2101f51
 except mysql.connector.Error as error:
         if error.errno == errorcode.ER_BAD_DB_ERROR:
                 print("Não encontrei o banco")
@@ -73,7 +79,11 @@ while (True):
         ramPercent = ram.percent
 
         #CURSOR
+<<<<<<< HEAD
         # cursorLocal = db_connection.cursor()
+=======
+        cursorLocal = db_connection.cursor()
+>>>>>>> bddfacc3af14a5e406667cb4deb0d8b3d2101f51
         cursorAzure = cnxn.cursor()
 
     #AZURE
@@ -81,15 +91,26 @@ while (True):
         sql = f"INSERT INTO Leitura (fkMaquina, sistemaOperacional, cpuMedia, qtdProcessador, ramTotal, ramUso,  ramUsoPercent, discoTotal, discoUso, discoLivre, discoPercent, dataHora) VALUES ({fkMaquina},'{sistemaoperacional}', {porcentagem_cpu}, {processador}, {ramTotal}, {ramUso},{ram.percent},{discoTotal},{discoUso},{discoLivre},{disk.percent},(CURRENT_TIMESTAMP))"
         cursorAzure.execute(sql)
     #LOCAL
+<<<<<<< HEAD
         # fkMaquina = 50000
         # sql = f"INSERT INTO Leitura (fkMaquina, sistemaOperacional, cpuMedia, qtdProcessador, ramTotal, ramUso,  ramUsoPercent, discoTotal, discoUso, discoLivre, discoPercent, dataHora) VALUES ({fkMaquina},'{sistemaoperacional}', {porcentagem_cpu}, {processador}, {ramTotal}, {ramUso},{ram.percent},{discoTotal},{discoUso},{discoLivre},{disk.percent},(CURRENT_TIMESTAMP))"
         # cursorLocal.execute(sql)
+=======
+        fkMaquina = 50000
+        sql = f"INSERT INTO Leitura (fkMaquina, sistemaOperacional, cpuMedia, qtdProcessador, ramTotal, ramUso,  ramUsoPercent, discoTotal, discoUso, discoLivre, discoPercent, dataHora) VALUES ({fkMaquina},'{sistemaoperacional}', {porcentagem_cpu}, {processador}, {ramTotal}, {ramUso},{ram.percent},{discoTotal},{discoUso},{discoLivre},{disk.percent},(CURRENT_TIMESTAMP))"
+        cursorLocal.execute(sql)
+>>>>>>> bddfacc3af14a5e406667cb4deb0d8b3d2101f51
         
 
         print("\n")
         print(cursorAzure.rowcount, "Inserindo no banco (Azure).")
         cnxn.commit()
 
+<<<<<<< HEAD
         # print(cursorLocal.rowcount, "Inserindo no banco (Local).")
         # db_connection.commit()
+=======
+        print(cursorLocal.rowcount, "Inserindo no banco (Local).")
+        db_connection.commit()
+>>>>>>> bddfacc3af14a5e406667cb4deb0d8b3d2101f51
         time.sleep(5)

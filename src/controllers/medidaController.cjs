@@ -132,6 +132,7 @@ function buscarUltimasMedidasTEMP(req, res) {
     });
 }
 
+<<<<<<< HEAD
 function buscarMedidasEmTempoRealTEMP1(req, res) {
 
     var idAquario = req.params.idAquario;
@@ -486,6 +487,8 @@ function TempMin3(req, res){
 }
 
 
+=======
+>>>>>>> bddfacc3af14a5e406667cb4deb0d8b3d2101f51
 function buscarUltimaMedidaDisco(req, res){
     var idAquario = req.params.idAquario;
 
@@ -504,6 +507,7 @@ function buscarUltimaMedidaDisco(req, res){
     });
 }
 
+<<<<<<< HEAD
 function  UltimasMedidasRotulos(req, res) {
 
     const limite_linhas = 6;
@@ -630,6 +634,8 @@ function cardlucas(req, res) {
 }
 
 // listar processos
+=======
+>>>>>>> bddfacc3af14a5e406667cb4deb0d8b3d2101f51
 function buscarProc(req, res){
     
     var fkMaquina = req.params.fkMaquina;
@@ -649,7 +655,10 @@ function buscarProc(req, res){
     });
 }
 
+<<<<<<< HEAD
 // listar top3 processos CPU%
+=======
+>>>>>>> bddfacc3af14a5e406667cb4deb0d8b3d2101f51
 function procCPU(req, res) {
 
     // var fkMaquina = req.params.fkMaquina;
@@ -668,7 +677,10 @@ function procCPU(req, res) {
     });
 }
 
+<<<<<<< HEAD
 // listar top3 processos RAM%
+=======
+>>>>>>> bddfacc3af14a5e406667cb4deb0d8b3d2101f51
 function procRAM(req, res) {
 
     medidaModel.procRAM().then(function (resultado) {
@@ -684,6 +696,7 @@ function procRAM(req, res) {
     });
 }
 
+<<<<<<< HEAD
 function lotethais(req, res){
 
     var idLote = req.params.idLote;
@@ -704,6 +717,8 @@ function lotethais(req, res){
 }
 
 
+=======
+>>>>>>> bddfacc3af14a5e406667cb4deb0d8b3d2101f51
 module.exports = {
     buscarUltimasMedidas,
     buscarMedidasEmTempoReal,
@@ -711,6 +726,7 @@ module.exports = {
     buscarMedidasEmTempoRealRAM,
     buscarMedidasEmTempoRealTEMP,
     buscarUltimasMedidasTEMP,
+<<<<<<< HEAD
     buscarMedidasEmTempoRealTEMP1,
     buscarUltimasMedidasTEMP1,
     buscarMedidasEmTempoRealTEMPMK1,
@@ -740,4 +756,11 @@ module.exports = {
     procCPU,
     procRAM,
     lotethais
+=======
+    buscarUltimaMedidaDisco,
+    buscarProc,
+    procCPU,
+    procRAM
+    
+>>>>>>> bddfacc3af14a5e406667cb4deb0d8b3d2101f51
 }

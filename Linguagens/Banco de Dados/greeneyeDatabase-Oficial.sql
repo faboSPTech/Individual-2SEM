@@ -69,8 +69,11 @@ dataHora datetime
 
 create table Temperatura(
 id int primary key auto_increment,
+<<<<<<< HEAD
 fkMaquina int,
 foreign key (fkMaquina) references Maquina(idMaquina),
+=======
+>>>>>>> bddfacc3af14a5e406667cb4deb0d8b3d2101f51
 tempMin decimal(5,2),
 tempValor decimal(5,2),
 tempMax decimal(5,2),
@@ -94,9 +97,13 @@ insert into Lote values (null, '21-09-22','Inspiron 660', 200,10000,1000);
 
 insert into Maquina values (null,20000),
 						   (null,20000),
+<<<<<<< HEAD
 						   (null,20000),
 						   (null,20000),
                            (null,20000);
+=======
+						   (null,20000);
+>>>>>>> bddfacc3af14a5e406667cb4deb0d8b3d2101f51
 
 -- Puxando dados das tabelas:
 
@@ -104,12 +111,21 @@ insert into Maquina values (null,20000),
 select * from Empresa;
 select * from Usuario;
 select * from Especificacoes;
+<<<<<<< HEAD
 select * from Lote;*/
 select * from maquina;
+=======
+select * from Lote;
+select * from maquina;*/
+>>>>>>> bddfacc3af14a5e406667cb4deb0d8b3d2101f51
 select * from Leitura;
 select * from Temperatura;
 
 -- truncate table leitura;
 -- drop table Leitura;
 
+<<<<<<< HEAD
 -- select round(avg(tempValor),2) from Temperatura;
+=======
+select round(avg(tempValor),2) from Temperatura;
+>>>>>>> bddfacc3af14a5e406667cb4deb0d8b3d2101f51

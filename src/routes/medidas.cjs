@@ -42,6 +42,7 @@ router.get("/tempo-realTEMP/:idRealTEMP", function (req, res) {
     medidaController.buscarMedidasEmTempoRealTEMP(req, res);
 })
 
+<<<<<<< HEAD
 router.get("/ultimasTEMP1/:idTEMP", function (req, res) {
     medidaController.buscarUltimasMedidasTEMP1(req, res);
 });
@@ -114,10 +115,13 @@ router.get("/ultimasTempMin3/", function (req, res) {
     medidaController.TempMin3(req, res);
 });
 
+=======
+>>>>>>> bddfacc3af14a5e406667cb4deb0d8b3d2101f51
 router.get("/ultimaDisco/:idArmazem", function (req, res) {
     medidaController.buscarUltimaMedidaDisco(req, res);
 })
 
+<<<<<<< HEAD
 router.get("/ultimasRotulos/:idRotulos", function (req, res) {
     medidaController.UltimasMedidasRotulos(req, res);
 });
@@ -142,6 +146,8 @@ router.get("/cardlucas/:idTot", function (req, res) {
     medidaController.cardlucas(req, res);
 });
 
+=======
+>>>>>>> bddfacc3af14a5e406667cb4deb0d8b3d2101f51
 router.get("/buscarProc/:fkMaquina", function (req, res) {
     medidaController.buscarProc(req, res);
 })
@@ -154,10 +160,13 @@ router.get("/procRAM", function (req, res) {
     medidaController.procRAM(req, res);
 });
 
+<<<<<<< HEAD
 router.get("/lotethais/:idLote", function (req, res) {
     medidaController.lotethais(req, res);
 });
 
 
+=======
+>>>>>>> bddfacc3af14a5e406667cb4deb0d8b3d2101f51
 
 module.exports = router;

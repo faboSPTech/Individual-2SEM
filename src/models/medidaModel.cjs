@@ -64,7 +64,11 @@ function buscarUltimasMedidasRAM(idAquario, limite_linhas) {
 from registros  
 order by idRegistros desc limit ${limite_linhas}` */
 
+<<<<<<< HEAD
             `select cpuMedia, ramUsoPercent, dataHora, date_format(dataHora, '%H:%i') as horarioF from Leitura order by idLeitura desc limit ${limite_linhas}`;
+=======
+ `select cpuMedia, ramUsoPercent, dataHora, date_format(dataHora, '%H:%i') as horarioF from Leitura order by idLeitura desc limit ${limite_linhas}`;
+>>>>>>> bddfacc3af14a5e406667cb4deb0d8b3d2101f51
 
     } else {
         console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
@@ -134,8 +138,13 @@ function buscarMedidasEmTempoRealRAM(idAquario) {
         DATE_FORMAT(REGISTRO_MOMENTO,'%H:%i:%s') as momento_grafico
     from registros  
     order by idRegistros desc limit 1` */
+<<<<<<< HEAD
 
             `select ramUsoPercent, dataHora, date_format(dataHora, '%H:%i') as horarioF 
+=======
+            
+    `select ramUsoPercent, dataHora, date_format(dataHora, '%H:%i') as horarioF 
+>>>>>>> bddfacc3af14a5e406667cb4deb0d8b3d2101f51
     from Leitura order by idLeitura desc limit 1`
 
     } else {
@@ -160,7 +169,11 @@ function buscarUltimasMedidasTEMP(idAquario, limite_linhas) {
             //     CONVERT(varchar, REGISTRO_MOMENTO, 108) as momento_grafico
             // from registros  
             // order by idRegistros desc`;
+<<<<<<< HEAD
             `select top 12 tempValor, hora_agr, convert(varchar, hora_agr, 108) as horaTemp from Temperatura where fkMaquina between 50000 and 50003 order by id desc;`
+=======
+            `select top 12 tempValor, hora_agr, convert(varchar, hora_agr, 108) as horaTemp from Temperatura order by id desc;`
+>>>>>>> bddfacc3af14a5e406667cb4deb0d8b3d2101f51
 
     } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
         instrucaoSql = /* `select 
@@ -171,7 +184,11 @@ function buscarUltimasMedidasTEMP(idAquario, limite_linhas) {
 from registros  
 order by idRegistros desc limit ${limite_linhas}` */
 
+<<<<<<< HEAD
             `select tempValor, hora_agr, date_format(hora_agr, '%H:%i') as horaTemp from Temperatura where fkMaquina between 50000 and 50003 order by id desc limit ${limite_linhas}`;
+=======
+ `select tempValor, hora_agr, date_format(hora_agr, '%H:%i') as horaTemp from Temperatura order by id desc limit ${limite_linhas}`;
+>>>>>>> bddfacc3af14a5e406667cb4deb0d8b3d2101f51
 
     } else {
         console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
@@ -195,7 +212,11 @@ function buscarMedidasEmTempoRealTEMP(idAquario) {
             //     CONVERT(varchar, REGISTRO_MOMENTO, 108) as momento_grafico
             // from registros  
             // order by idRegistros desc`;
+<<<<<<< HEAD
             `select top 12 tempValor, hora_agr, convert(varchar, hora_agr, 108) as horaTemp from Temperatura where fkMaquina between 50000 and 50003 order by id desc`
+=======
+            `select top 12 tempValor, hora_agr, convert(varchar, hora_agr, 108) as horaTemp from Temperatura order by id desc`
+>>>>>>> bddfacc3af14a5e406667cb4deb0d8b3d2101f51
 
     } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
         instrucaoSql = /* `select 
@@ -206,7 +227,11 @@ function buscarMedidasEmTempoRealTEMP(idAquario) {
     from registros  
     order by idRegistros desc limit 1` */
 
+<<<<<<< HEAD
             `select tempValor, hora_agr, date_format(hora_agr, '%H:%i') as horaTemp from Temperatura where fkMaquina between 50000 and 50003 order by id desc limit 1`
+=======
+            `select tempValor, hora_agr, date_format(hora_agr, '%H:%i') as horaTemp from Temperatura order by id desc limit 1`
+>>>>>>> bddfacc3af14a5e406667cb4deb0d8b3d2101f51
 
     } else {
         console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
@@ -217,6 +242,7 @@ function buscarMedidasEmTempoRealTEMP(idAquario) {
     return database.executar(instrucaoSql);
 }
 
+<<<<<<< HEAD
 function buscarUltimasMedidasTEMP1(idAquario, limite_linhas) {
 
     instrucaoSql = ''
@@ -753,6 +779,8 @@ function TempMin3() {
 }
 
 
+=======
+>>>>>>> bddfacc3af14a5e406667cb4deb0d8b3d2101f51
 function buscarUltimaMedidaDisco(idAquario) {
 
     instrucaoSql = ''
@@ -770,6 +798,7 @@ function buscarUltimaMedidaDisco(idAquario) {
             `select top 1 discoPercent from Leitura order by idLeitura desc;`;
 
     } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
+<<<<<<< HEAD
         instrucaoSql = /* `select 
         REGISTRO_TEMP, 
         REGISTRO_UMID, 
@@ -777,6 +806,9 @@ function buscarUltimaMedidaDisco(idAquario) {
         DATE_FORMAT(REGISTRO_MOMENTO,'%H:%i:%s') as momento_grafico
     from registros  
     order by idRegistros desc limit 1` */
+=======
+        instrucaoSql = 
+>>>>>>> bddfacc3af14a5e406667cb4deb0d8b3d2101f51
             `select discoPercent from Leitura order by idLeitura desc limit 1;`;
     } else {
         console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
@@ -787,6 +819,7 @@ function buscarUltimaMedidaDisco(idAquario) {
     return database.executar(instrucaoSql);
 }
 
+<<<<<<< HEAD
 function UltimasMedidasRotulos(idAquario, limite_linhas) {
 
     instrucaoSql = ''
@@ -966,12 +999,18 @@ function scripts() {
 }
 
 // listar processos
+=======
+>>>>>>> bddfacc3af14a5e406667cb4deb0d8b3d2101f51
 function buscarProc(fkMaquina){
     
     instrucaoSql = ''
 
     if(process.env.AMBIENTE_PROCESSO == "producao") {
+<<<<<<< HEAD
         instrucaoSql = `select idProcesso as 'ID', fkMaquina as 'Maquina', nome as 'Nome', pid as 'PID', status_proc as 'Status', cpu_percent as 'CPU %', ram_percent as 'RAM %' from Processos;`;
+=======
+        instrucaoSql = `select idProcesso, fkMaquina, nome, pid, status_proc, cpu_percent, ram_percent from Processos`;
+>>>>>>> bddfacc3af14a5e406667cb4deb0d8b3d2101f51
     } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento"){
         instrucaoSql = `select idProcesso, fkMaquina, nome, pid, status_proc, cpu_percent, ram_percent, data_hora from Processos where fkMaquina = ${fkMaquina};`; 
     } else {
@@ -982,7 +1021,10 @@ function buscarProc(fkMaquina){
     return database.executar(instrucaoSql);
 }
 
+<<<<<<< HEAD
 // listar 3 top proc CPU%
+=======
+>>>>>>> bddfacc3af14a5e406667cb4deb0d8b3d2101f51
 function procCPU(){
     
     instrucaoSql = ''
@@ -999,7 +1041,10 @@ function procCPU(){
     return database.executar(instrucaoSql);
 }
 
+<<<<<<< HEAD
 // listar 3 top proc RAM%
+=======
+>>>>>>> bddfacc3af14a5e406667cb4deb0d8b3d2101f51
 function procRAM(){
     
     instrucaoSql = ''
@@ -1016,6 +1061,7 @@ function procRAM(){
     return database.executar(instrucaoSql);
 }
 
+<<<<<<< HEAD
 function lotethais(idLote){
     
     instrucaoSql = ''
@@ -1035,6 +1081,8 @@ function lotethais(idLote){
 }
 
 
+=======
+>>>>>>> bddfacc3af14a5e406667cb4deb0d8b3d2101f51
 module.exports = {
     buscarUltimasMedidas,
     buscarMedidasEmTempoReal,
@@ -1042,6 +1090,7 @@ module.exports = {
     buscarMedidasEmTempoRealRAM,
     buscarUltimasMedidasTEMP,
     buscarMedidasEmTempoRealTEMP,
+<<<<<<< HEAD
     buscarUltimasMedidasTEMP1,
     buscarMedidasEmTempoRealTEMP1,
     buscarUltimasMedidasTEMPMK1,
@@ -1072,4 +1121,10 @@ module.exports = {
     procCPU,
     procRAM,
     lotethais
+=======
+    buscarUltimaMedidaDisco,
+    buscarProc,
+    procCPU,
+    procRAM
+>>>>>>> bddfacc3af14a5e406667cb4deb0d8b3d2101f51
 }

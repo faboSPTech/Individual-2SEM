@@ -81,7 +81,6 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  /* overflow-x: hidden; */
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -1673,11 +1672,6 @@ progress {
   .col-lg-5 {
     flex: 0 0 auto;
     width: 41.666667%;
-  }
-
-  #card-fabo {
-    flex: 0 0 auto;
-    width: 50%;
   }
 
   .col-lg-6 {
@@ -5244,24 +5238,11 @@ fieldset:disabled .btn {
 }
 
 .card-body {
-<<<<<<< HEAD
-  /* flex: 1 1 auto; */
-=======
   flex: 1 1 auto;
->>>>>>> bddfacc3af14a5e406667cb4deb0d8b3d2101f51
   padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
   color: var(--bs-card-color);
 }
 
-<<<<<<< HEAD
-.card-body2 {
-  /* flex: 1 1 auto; */
-  /* padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x); */
-  color: var(--bs-card-color);
-}
-
-=======
->>>>>>> bddfacc3af14a5e406667cb4deb0d8b3d2101f51
 .card-title {
   margin-bottom: var(--bs-card-title-spacer-y);
 }
@@ -21048,11 +21029,7 @@ fieldset:disabled .btn {
 
 .card .card-body {
   font-family: "Open Sans";
-<<<<<<< HEAD
-  /* padding: 1.5rem; */
-=======
   padding: 1.5rem;
->>>>>>> bddfacc3af14a5e406667cb4deb0d8b3d2101f51
 }
 
 .card.card-plain {
@@ -26821,72 +26798,3 @@ pre[class*="language-"] {
 }
 
 /*# sourceMappingURL=dashboard-free.css.map */
-
-<<<<<<< HEAD
-/* Button individual Gabs - TEMP */
-
-.button-gabs {
-  border: 0;
-  background-color: #3aaf85;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  border-end-start-radius:15px ;
-  border-end-end-radius:15px;
-  text-decoration: none;
-}
-
-.button-gabs a:hover{
-  color: ;
-  font-family: Tahoma, sans-serif;
-}
-
-.div-lotes{
-  width: auto;
-  margin-top: 15px;
-}
-
-.div-metricas{
-  align-items: center;
-  background-color: #cbd3da;
-  border-bottom-right-radius: 15px;
-  border-bottom-left-radius: 15px;
-  display: flex;
-  padding-left: 50px;
-  box-shadow: 3px 3px 3px;
-  padding-left: 30%;
-}
-
-#div-metricas-first{
-  /* background-color: #627594; */
-  border-radius: 50%;
-  font-size:150%;
-  margin-bottom: 0px;
-  padding: 20px 20px 20px 20px;
-  color: #344767;
-}
-
-#div-metricas-second{
-  /* background-color: #627594; */
-  border-radius: 50%;
-  font-size:150%;
-  padding: 20px 20px 20px 20px;
-  color: #344767;
-}
-
-.button-back{
-  color: #000;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  text-decoration: none;
-}
-
-.button-back a:hover{
-  color: #000;
-  font-family: Tahoma, sans-serif;
-=======
-/* Button individual Gabs */
-
-.button-gabs{
-  border-radius: 10px;
-  background-color: black;
-  color: white;
->>>>>>> bddfacc3af14a5e406667cb4deb0d8b3d2101f51
-}
