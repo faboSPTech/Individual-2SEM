@@ -1,0 +1,235 @@
+.containercalc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../img/slide/slide-3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.filter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.calc_box {
+    margin-top: 8vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 67vh;
+    width: 45vw;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: green solid 6px;
+    border-radius: 25px;
+    color: rgba(255, 255, 255, 0.5);
+    transition: 2.0s;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.calc_box:hover {
+    color: rgba(255, 255, 255, 0.9);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    overflow: hidden;
+    transition: 2.0s;
+}
+
+.calc_text {
+    font-size: 20px;
+    text-transform: uppercase;
+    color: green;
+    font-weight: bolder;
+    align-items: center;
+}
+
+.inp_calc {
+    width: 32vw;
+}
+
+.inp_calc::placeholder {
+    font-weight: bolder;
+    text-align: center;
+    font-size: 12px;
+    background-color: rgba(0, 0, 0, 0.0);
+}
+
+.calc_inp {
+    text-align: center;
+    outline: 0;
+    border: none;
+    width: 20vw;
+}
+
+.calc_inp:focus {
+    text-align: center;
+    outline: 0;
+    border: none;
+    border-bottom: green solid 2px;
+}
+
+.calc_inp, textarea {
+    background-color: rgba(0, 0, 0, 0.0);
+    color: white;
+    text-align: center;
+    border: none;
+    border-bottom: green solid 2px;
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+.calc_btn {
+    width: 15vw;
+    height: 6vh;
+    margin-top: 5vh;
+    font-size: 15px;
+    border: green solid 2px;
+    border-radius: 5px;
+    color: white;
+    background-color: black;
+    font-weight: bolder;
+}
+
+.popup-wrapper {
+    display: none;
+    background-color: rgba(0, 0, 0, .5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+.popup {
+    font-family: monospace;
+    font-size: 15px;
+    text-align: center;
+    width: 100%;
+    max-width: 80vw;
+    margin: 10% auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: relative;
+}
+
+
+.popup a {
+    color: white;
+    cursor: pointer;
+    padding: 6px 10px;
+    text-decoration: none;
+    background-color: crimson;
+}
+
+.popup-closer {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.inp_valor {
+    border: none;
+    border-bottom: green solid 2px;
+}
+
+.inp_valor::placeholder{
+    text-align: center;
+    color: green;
+}
+
+.inp_valor, textarea{
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.0);
+}
+
+.inp_valor :focus{
+    outline: 0;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.0);
+}
+
+.inp_results {
+    margin-top: 2vh;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1vw;
+}
+
+@media (min-height: 700px) { 
+    a {
+        font-size: 60px;
+    }
+    #header{
+        height: 10vh;
+    }
+  .calc_box {
+    height: 55vh;
+    width: 75vw;
+    font-size: 35px;
+  }
+  .calc_inp{
+    margin-top: 40px;
+    height: 3vh;
+    width: 40vw;
+  }
+  .calc_inp::placeholder{
+    font-size: 30px;
+  }
+
+  .navbar-mobile a,
+  .navbar-mobile a:focus
+  {
+    gap: 20px;
+    font-size: 40px;
+    color: #2a2a2a;
+  }
+  .mobile-nav-toggle{
+    font-size: 80px;
+  }
+
+  .bi-x::before { 
+    left: 0;
+    right: 0;
+    
+    font-size: 160px;
+    padding-bottom: 50px;
+ }
+
+  .calc_btn{
+  width: 30vw;
+  font-size: 30px;
+  height: 6vh;
+  }
+  .titulo {
+    font-size: 40px;
+  }
+  .popup-up, .popup-wrapper{
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .inp_results{
+    width: 100%;
+    gap: 0.5vw;
+    flex-direction: column;
+  }
+  .popup-content {
+    width: 100%;
+    text-align: center;
+    margin-top: 0px;
+    padding: 0;
+    font-size: 35px;
+  }
+}

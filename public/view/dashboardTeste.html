@@ -1,0 +1,1489 @@
+<!--
+=========================================================
+* * Black Dashboard - v1.0.1
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/black-dashboard
+* Copyright 2019 Creative Tim (https://www.creative-tim.com)
+
+
+* Coded by Creative Tim
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="76x76" href="assets/img/icon-ekran.png">
+  <link rel="icon" type="image/png" href="assets/img/icon-ekran.png">
+  <title>
+    GreenEye - Dashboard
+  </title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet">
+
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="assets/css/main.css"> -->
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" />
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+  <!-- Nucleo Icons -->
+  <link href="assets/css/nucleo-icons.css" rel="stylesheet" />
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="assets/css/black-dashboard.css?v=1.0.0">
+  <!-- CSS Just for demo purpose, don't include it in your project -->
+  <link href="assets/demo/demo.css" rel="stylesheet" />
+  <script src="http://www.chartjs.org/dist/3.9.1/Chart.js"></script>+
+</head>
+
+<body class="" onload="disk()">
+  <div class="wrapper">
+    <div class="sidebar">
+      <!--
+        Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red"
+    -->
+      <div class="sidebar-wrapper">
+        <div class="logo">
+          <a href="javascript:void(0)" class="simple-text logo-mini">
+            <img class="tim-icons icon-chart-bar-32" src="../assets/img/olhoolho.png" width="90px" id="img-between">
+          </a>
+          <a href="javascript:void(0)" class="simple-text logo-normal" >
+            GreenEye
+          </a>
+        </div>
+        <ul class="nav">
+          <li class="active ">
+            <a href="dashboardTeste.html">
+              <i class="tim-icons bi bi-pip"></i>
+              <p>Gráficos Gerais</p>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <i class="tim-icons bi bi-pie-chart-fill"></i>
+              <p>Lote 1</p>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <i class="tim-icons bi bi-bar-chart-line"></i>
+              <p>Lote 2</p>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <i class="tim-icons bi bi-file-bar-graph-fill"></i>
+              <p>Lote 3</p>
+            </a>
+          </li>
+          <li>
+            <a href="tables.html">
+              <i class="tim-icons bi bi-card-list"></i>
+              <p>Histórico Diário</p>
+            </a>
+          </li>
+          <li>
+            <a href="tables.html">
+              <i class="tim-icons bi bi-border-width"></i>
+              <p>Histórico Mensal</p>
+            </a>
+          </li>
+          <li>
+            <a href="cadUsuarios.html">
+              <i class="tim-icons bi bi-person-plus"></i>
+              <p>Cadastrar funcionário</p>
+            </a>
+          </li>
+          <!-- <li>
+            <a href="unidade.html">
+              <i class="tim-icons icon-square-pin"></i>
+              <p>Cadastrar unidade</p>
+            </a>
+          </li> -->
+          <li>
+            <a href="https://app.pipefy.com/public/form/JBbirBal">
+              <i class="tim-icons bi bi-headset"></i>
+              <p>Suporte Greeneye</p>
+            </a>
+          </li>
+          <li>
+            <a href="https://app.pipefy.com/public/form/JBbirBal">
+              <i class="tim-icons"><img src="./assets/img/dell2.png"></i>
+              <p>Suporte Interno</p>
+            </a>
+          </li>
+          <li>
+            <a href="index.html">
+              <i class="tim-icons bi bi-x-lg"></i>
+              <p>Sair</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="main-panel">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-absolute navbar-transparent">
+        <div class="container-fluid">
+          <div class="navbar-wrapper">
+            <div class="navbar-toggle d-inline">
+              <button type="button" class="navbar-toggler">
+                <span class="navbar-toggler-bar bar1"></span>
+                <span class="navbar-toggler-bar bar2"></span>
+                <span class="navbar-toggler-bar bar3"></span>
+              </button>
+            </div>
+            <a class="navbar-brand" href="javascript:void(0)">Dashboard - id 10001</a>
+          </div>
+          <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+          </button> -->
+          <div class="collapse navbar-collapse" id="navigation">
+            <ul class="navbar-nav ml-auto">
+              <li class="search-bar input-group">
+                <!-- <button class="btn btn-link" id="search-button" data-toggle="modal" data-target="#searchModal"><i class="tim-icons icon-zoom-split" ></i>
+                  <span class="d-lg-none d-md-block">Search</span>
+                </button> -->
+              </li>
+              <li class="dropdown nav-item">
+                <!-- <a href="javascript:void(0)" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                  <div class="notification d-none d-lg-block d-xl-block"></div>
+                  <i class="tim-icons icon-sound-wave"></i>
+                  <p class="d-lg-none">
+                    Notifications
+                  </p>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-right dropdown-navbar">
+                  <li class="nav-link"><a href="#" class="nav-item dropdown-item">Mike John responded to your email</a></li>
+                  <li class="nav-link"><a href="javascript:void(0)" class="nav-item dropdown-item">You have 5 more tasks</a></li>
+                  <li class="nav-link"><a href="javascript:void(0)" class="nav-item dropdown-item">Your friend Michael is in town</a></li>
+                  <li class="nav-link"><a href="javascript:void(0)" class="nav-item dropdown-item">Another notification</a></li>
+                  <li class="nav-link"><a href="javascript:void(0)" class="nav-item dropdown-item">Another one</a></li>
+                </ul> -->
+              </li>
+              <li class="dropdown nav-item">
+                <!-- <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                  <div class="photo">
+                    <img src="../assets/img/anime3.png" alt="Profile Photo">
+                  </div>
+                  <b class="caret d-none d-lg-block d-xl-block"></b>
+                  <p class="d-lg-none">
+                    Log out
+                  </p>
+                </a>
+                <ul class="dropdown-menu dropdown-navbar">
+                  <li class="nav-link"><a href="javascript:void(0)" class="nav-item dropdown-item">Profile</a></li>
+                  <li class="nav-link"><a href="javascript:void(0)" class="nav-item dropdown-item">Settings</a></li>
+                  <li class="dropdown-divider"></li>
+                  <li class="nav-link"><a href="javascript:void(0)" class="nav-item dropdown-item">Log out</a></li>
+                </ul> -->
+              </li>
+              <li class="separator d-lg-none"></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="modal modal-search fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModal"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <!-- <div class="modal-content">
+            <div class="modal-header">
+              <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="SEARCH">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <i class="tim-icons icon-simple-remove"></i>
+              </button>
+            </div>
+          </div> -->
+        </div>
+      </div>
+      <!-- End Navbar -->
+      <div class="content">
+        <div class="row">
+          <div class="row row3">
+            <div class="col-lg-6">
+              <div class="card card-chart">
+                <div class="card-header ">
+                  <div class="row2">
+                    <div class="col-lg-6 text-left">
+                      <h5 class="card-category">Desempenho %</h5>
+                      <h2 class="card-title">CPU</h2>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body card-body-cpu">
+                  <div class="chart-area">
+                    <canvas id="chartBig11"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="card card-chart">
+                <div class="card-header ">
+                  <div class="row2">
+                    <div class="col-lg-6 text-left">
+                      <h5 class="card-category">Desempenho %</h5>
+                      <h3 class="card-title">Memória</h3>
+                    </div>
+                    <div class="card-body">
+                      <div class="chart-area">
+                        <canvas id="chartLinePurple1"></canvas>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-7">
+              <div class="card card-chart">
+                <div class="card-header ">
+                  <div class="row2">
+                    <div class="col-lg-6 col-md-7 text-left">
+                      <h5 class="card-category">Desempenho %</h5>
+                      <h3 class="card-title">Disco</h3>
+                    </div>
+                    <div class="card-body">
+                      <div class="chart-area">
+                        <canvas id="CountryChart1"></canvas>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="col-lg-6">
+              <div class="card card-chart">
+                <div class="card-header ">
+                  <div class="row2">
+                    <div class="col-lg-6 text-left">
+                      <h5 class="card-category">Desempenho %</h5>
+                      <h3 class="card-title">Memória</h3>
+                    </div>
+                    <div class="card-body">
+                      <div class="chart-area">
+                        <canvas id="chartLinePurple1"></canvas>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+          </div>
+
+
+          <!-- <div class="row"> -->
+          <!-- <div class="col-lg-4">
+          <div class="card card-chart">
+            <div class="card-header">
+              <h5 class="card-category">Desempenho %</h5>
+              <h3 class="card-title">Memória</h3>
+            </div>
+            <div class="card-body">
+              <div class="chart-area">
+                <canvas id="chartLinePurple1"></canvas>
+              </div>
+            </div>
+          </div>
+        </div> -->
+          <!-- <div class="col-lg-4">
+            <div class="card card-chart">
+              <div class="card-header">
+                <h5 class="card-category">Desempenho Mb</h5>
+                <h3 class="card-title">Internet</h3>
+              </div>
+              <div class="card-body">
+                <div class="chart-area">
+                  <canvas id="chartLineGreen1"></canvas>
+                </div>
+              </div>
+            </div>
+          </div> -->
+          <!-- <div class="col-lg-4">
+            <div class="card card-chart">
+              <div class="card-header">
+                <h5 class="card-category">Desempenho %</h5>
+                <h3 class="card-title">Disco</h3>
+              </div>
+              <div class="card-body">
+                <div class="chart-area">
+                  <canvas id="CountryChart1"></canvas>
+                </div>
+              </div>
+            </div>
+          </div> -->
+          <!-- </div>
+    </div> -->
+          <div class="row">
+            <div class="col-lg-6 col-md-12">
+              <div class="card card-tasks">
+                <div class="card-header ">
+                  <h4 class="title d-inline">Histórico alertas</h4>
+                  <p class="card-category d-inline">hoje</p>
+                </div>
+                <div class="card-body ">
+                  <div class="table-full-width table-responsive">
+                    <table class="table">
+                      <tbody>
+                        <tr>
+                          <td>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox" value="">
+                              </label>
+                            </div>
+                          </td>
+                          <td>
+                            <p class="title">ESTADO CRÍTICO TOTEM 1 - 18:30:22</p>
+                            <p class="text-muted">100% RAM</p>
+                          </td>
+                          <td class="td-actions text-right">
+                            <!-- <button type="button" rel="tooltip" title="" class="btn btn-link" data-original-title="Edit Task">
+                            <i class="tim-icons icon-pencil"></i>
+                          </button> -->
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox" value="" checked="">
+
+                              </label>
+                            </div>
+                          </td>
+                          <td>
+                            <p class="title">ESTADO DE ALERTA TOTEM 3 - 15:28:43</p>
+                            <p class="text-muted">87% CPU</p>
+                          </td>
+                          <td class="td-actions text-right">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox" value="">
+                              </label>
+                            </div>
+                          </td>
+                          <td>
+                            <p class="title">ESTADO CRÍTICO TOTEM 2 - 15:18:22</p>
+                            <p class="text-muted">100% CPU</p>
+                          </td>
+                          <td class="td-actions text-right">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox" value="">
+                              </label>
+                            </div>
+                          </td>
+                          <td>
+                            <p class="title">ESTADO DE ALERTA TOTEM 1 - 13:34:24</p>
+                            <p class="text-muted">85% RAM</p>
+                          </td>
+                          <td class="td-actions text-right">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox" value="">
+                              </label>
+                            </div>
+                          </td>
+                          <td>
+                            <p class="title">ESTADO DE ALERTA TOTEM 2 - 12:43:15</p>
+                            <p class="text-muted">98% DISCO</p>
+                          </td>
+                          <td class="td-actions text-right">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox" value="">
+                              </label>
+                            </div>
+                          </td>
+                          <td>
+                            <p class="title">ESTADO DE ALERTA TOTEM 3 - 12:30:25</p>
+                            <p class="text-muted">100% DISCO</p>
+                          </td>
+                          <td class="td-actions text-right">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox" value="">
+                              </label>
+                            </div>
+                          </td>
+                          <td>
+                            <p class="title">ESTADO DE ALERTA TOTEM 1 - 08:45:23</p>
+                            <p class="text-muted">85% CPU</p>
+                          </td>
+                          <td class="td-actions text-right">
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- HISTORICO -->
+            <div class="col-lg-6 col-md-12">
+              <div class="card card-tasks">
+                <div class="card-header ">
+                  <h4 class="title d-inline">Histórico do dia de 6 em 6 horas</h4>
+                </div>
+                <div class="card-body ">
+                  <div class="table-full-width table-responsive">
+                    <table class="table tablesorter " id="">
+                      <tbody>
+                        <thead class=" text-primary">
+
+                          <tr>
+                            <th>
+                              Totem
+                            </th>
+                            <th>
+                              CPU
+                            </th>
+                            <th>
+                              RAM
+                            </th>
+                            <th>
+                              DISCO
+                            </th>
+                            <th class="text-center">
+                              HORA
+                            </th>
+                          </tr>
+                        </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            1
+                          </td>
+                          <td>
+                            36%
+                          </td>
+                          <td>
+                            68%
+                          </td>
+                          <td>
+                            43%
+                          </td>
+                          <td class="text-center">
+                            00:00:00
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            2
+                          </td>
+                          <td>
+                            41%
+                          </td>
+                          <td>
+                            69%
+                          </td>
+                          <td>
+                            56%
+                          </td>
+                          <td class="text-center">
+                            00:00:00
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            3
+                          </td>
+                          <td>
+                            21%
+                          </td>
+                          <td>
+                            57%
+                          </td>
+                          <td>
+                            32%
+                          </td>
+                          <td class="text-center">
+                            00:00:00
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            1
+                          </td>
+                          <td>
+                            32%
+                          </td>
+                          <td>
+                            67%
+                          </td>
+                          <td>
+                            41%
+                          </td>
+                          <td class="text-center">
+                            04:00:00
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            2
+                          </td>
+                          <td>
+                            46%
+                          </td>
+                          <td>
+                            78%
+                          </td>
+                          <td>
+                            56%
+                          </td>
+                          <td class="text-center">
+                            04:00:00
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            3
+                          </td>
+                          <td>
+                            28%
+                          </td>
+                          <td>
+                            58%
+                          </td>
+                          <td>
+                            39%
+                          </td>
+                          <td class="text-center">
+                            04:00:00
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            1
+                          </td>
+                          <td>
+                            32%
+                          </td>
+                          <td>
+                            48%
+                          </td>
+                          <td>
+                            79%
+                          </td>
+                          <td class="text-center">
+                            08:00:00
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            2
+                          </td>
+                          <td>
+                            37%
+                          </td>
+                          <td>
+                            57%
+                          </td>
+                          <td>
+                            60%
+                          </td>
+                          <td class="text-center">
+                            08:00:00
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            3
+                          </td>
+                          <td>
+                            10%
+                          </td>
+                          <td>
+                            25%
+                          </td>
+                          <td>
+                            48%
+                          </td>
+                          <td class="text-center">
+                            08:00:00
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            1
+                          </td>
+                          <td>
+                            29%
+                          </td>
+                          <td>
+                            48%
+                          </td>
+                          <td>
+                            38%
+                          </td>
+                          <td class="text-center">
+                            12:00:00
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            2
+                          </td>
+                          <td>
+                            89%
+                          </td>
+                          <td>
+                            100%
+                          </td>
+                          <td>
+                            98%
+                          </td>
+                          <td class="text-center">
+                            12:00:00
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            3
+                          </td>
+                          <td>
+                            15%
+                          </td>
+                          <td>
+                            38%
+                          </td>
+                          <td>
+                            39%
+                          </td>
+                          <td class="text-center">
+                            12:00:00
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            1
+                          </td>
+                          <td>
+                            30%
+                          </td>
+                          <td>
+                            60%
+                          </td>
+                          <td>
+                            40%
+                          </td>
+                          <td class="text-center">
+                            16:00:00
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            2
+                          </td>
+                          <td>
+                            40%
+                          </td>
+                          <td>
+                            70%
+                          </td>
+                          <td>
+                            50%
+                          </td>
+                          <td class="text-center">
+                            16:00:00
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            3
+                          </td>
+                          <td>
+                            18%
+                          </td>
+                          <td>
+                            19%
+                          </td>
+                          <td>
+                            49%
+                          </td>
+                          <td class="text-center">
+                            16:00:00
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            1
+                          </td>
+                          <td>
+                            50%
+                          </td>
+                          <td>
+                            63%
+                          </td>
+                          <td>
+                            48%
+                          </td>
+                          <td class="text-center">
+                            20:00:00
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            2
+                          </td>
+                          <td>
+                            46%
+                          </td>
+                          <td>
+                            71%
+                          </td>
+                          <td>
+                            48%
+                          </td>
+                          <td class="text-center">
+                            20:00:00
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            3
+                          </td>
+                          <td>
+                            19%
+                          </td>
+                          <td>
+                            53%
+                          </td>
+                          <td>
+                            32%
+                          </td>
+                          <td class="text-center">
+                            20:00:00
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- SIDE BAR -->
+    <div class="fixed-plugin">
+      <div class="dropdown show-dropdown">
+        <a href="#" data-toggle="dropdown">
+          <i class="fa fa-cog fa-2x"> </i>
+        </a>
+        <ul class="dropdown-menu">
+          <li class="header-title"> FUNDO </li>
+          <li class="adjustments-line">
+            <a href="javascript:void(0)" class="switch-trigger background-color">
+              <div class="badge-colors text-center">
+                <span class="badge filter badge-primary active" data-color="primary"></span>
+                <span class="badge filter badge-info" data-color="blue"></span>
+                <span class="badge filter badge-success" data-color="dark"></span>
+              </div>
+              <div class="clearfix"></div>
+            </a>
+          </li>
+          <li class="adjustments-line text-center color-change">
+            <span class="color-label">MODO CLARO</span>
+            <span class="badge light-badge mr-2"></span>
+            <span class="badge dark-badge ml-2"></span>
+            <span class="color-label">MODO ESCURO</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!--   Core JS Files   -->
+    <script src="assets/js/core/jquery.min.js"></script>
+    <script src="assets/js/core/popper.min.js"></script>
+    <script src="assets/js/core/bootstrap.min.js"></script>
+    <script src="assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+    <!--  Google Maps Plugin    -->
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+    <!-- Chart JS -->
+    <script src="assets/js/plugins/chartjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!--  Notifications Plugin    -->
+    <script src="assets/js/plugins/bootstrap-notify.js"></script>
+    <!-- Control Center for Black Dashboard: parallax effects, scripts for the example pages etc -->
+    <script src="assets/js/black-dashboard.min.js?v=1.0.0"></script>
+    <!-- Black Dashboard DEMO methods, don't include it in your project! -->
+    <script src="assets/demo/demo.js"></script>
+    <script>
+      $(document).ready(function () {
+        $().ready(function () {
+          $sidebar = $('.sidebar');
+          $navbar = $('.navbar');
+          $main_panel = $('.main-panel');
+
+          $full_page = $('.full-page');
+
+          $sidebar_responsive = $('body > .navbar-collapse');
+          sidebar_mini_active = true;
+          white_color = false;
+
+          window_width = $(window).width();
+
+          fixed_plugin_open = $('.sidebar .sidebar-wrapper .nav li.active a p').html();
+
+
+
+          $('.fixed-plugin a').click(function (event) {
+            if ($(this).hasClass('switch-trigger')) {
+              if (event.stopPropagation) {
+                event.stopPropagation();
+              } else if (window.event) {
+                window.event.cancelBubble = true;
+              }
+            }
+          });
+
+          $('.fixed-plugin .background-color span').click(function () {
+            $(this).siblings().removeClass('active');
+            $(this).addClass('active');
+
+            var new_color = $(this).data('color');
+
+            if ($sidebar.length != 0) {
+              $sidebar.attr('data', new_color);
+            }
+
+            if ($main_panel.length != 0) {
+              $main_panel.attr('data', new_color);
+            }
+
+            if ($full_page.length != 0) {
+              $full_page.attr('filter-color', new_color);
+            }
+
+            if ($sidebar_responsive.length != 0) {
+              $sidebar_responsive.attr('data', new_color);
+            }
+          });
+
+          $('.switch-sidebar-mini input').on("switchChange.bootstrapSwitch", function () {
+            var $btn = $(this);
+
+            if (sidebar_mini_active == true) {
+              $('body').removeClass('sidebar-mini');
+              sidebar_mini_active = false;
+              blackDashboard.showSidebarMessage('Sidebar mini deactivated...');
+            } else {
+              $('body').addClass('sidebar-mini');
+              sidebar_mini_active = true;
+              blackDashboard.showSidebarMessage('Sidebar mini activated...');
+            }
+
+            // we simulate the window Resize so the charts will get updated in realtime.
+            var simulateWindowResize = setInterval(function () {
+              window.dispatchEvent(new Event('resize'));
+            }, 180);
+
+            // we stop the simulation of Window Resize after the animations are completed
+            setTimeout(function () {
+              clearInterval(simulateWindowResize);
+            }, 1000);
+          });
+
+          $('.switch-change-color input').on("switchChange.bootstrapSwitch", function () {
+            var $btn = $(this);
+
+            if (white_color == true) {
+
+              $('body').addClass('change-background');
+              setTimeout(function () {
+                $('body').removeClass('change-background');
+                $('body').removeClass('white-content');
+              }, 900);
+              white_color = false;
+            } else {
+
+              $('body').addClass('change-background');
+              setTimeout(function () {
+                $('body').removeClass('change-background');
+                $('body').addClass('white-content');
+              }, 900);
+
+              white_color = true;
+            }
+
+
+          });
+
+          $('.light-badge').click(function () {
+            $('body').addClass('white-content');
+          });
+
+          $('.dark-badge').click(function () {
+            $('body').removeClass('white-content');
+          });
+        });
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        // Javascript method's body can be found in assets/js/demos.js
+        demo.initDashboardPageCharts();
+
+      });
+    </script>
+    <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
+    <script>
+      window.TrackJS &&
+        TrackJS.install({
+          token: "ee6fab19c5a04ac1a32a645abde4613a",
+          application: "black-dashboard-free"
+        });
+    </script>
+
+    <script>
+      function alertas(empresa, componente, metrica, frase) {
+        const options = {
+          method: 'POST',
+          headers: {
+            accept: 'application/json',
+            Authorization: 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJ1c2VyIjp7ImlkIjozMDIxNDc5MDEsImVtYWlsIjoiZWtyYW4uY29udGF0b0BnbWFpbC5jb20iLCJhcHBsaWNhdGlvbiI6MzAwMjAyMTU3fX0.VGdCGMvgQ2bYrUL_YKLK7zO99GBuEcVR9ADkNOjcuiFqh7KgjfsrLqEj86kbg0SgJMZ-J0smfL7Qepn0NltFCg',
+            'content-type': 'application/json'
+          },
+          body: JSON.stringify({
+            query: `mutation {           createCard(input: {             pipe_id:302731204,             title: "Card",             fields_attributes:[               {field_id: "nome_do_colaborador", field_value: "${empresa}"},{field_id: "cargo", field_value: "${componente}"},{field_id: "m_tricas", field_value: " ${frase}${metrica}"}             ],           }) {               card {                 title               }             }           }`
+          })
+        };
+        fetch('https://api.pipefy.com/graphql', options)
+          .then(response => response.json())
+          .then(response => console.log(response))
+          .catch(err => console.error(err));
+      }
+      function verificardisco(metrica) {
+        var frase = ""
+        // incluir uma nova medida de temperatura  
+        if (metrica >= 60 && metrica < 80) {
+          frase = "Alerta: Disco está ficando sobrecarregado! Espaço livre: "
+          console.log('Cheguei aqui')
+          alertas("Ekran", "Disco", metrica, frase)
+        } else if (metrica >= 80) {
+          frase = "Perigo: Disco sobrecarregado! Espaço livre: "
+          alertas("Ekran", "Disco", metrica, frase)
+        }
+      }
+      function verificarram(metrica) {
+        var frase = ""
+        // incluir uma nova medida de temperatura  
+        if (metrica >= 60 && metrica < 80) {
+          frase = "Alerta: RAM está ficando sobrecarregado! Porcentagem de uso: "
+          console.log('Cheguei aqui')
+          alertas("Ekran", "RAM", metrica, frase)
+        } else if (metrica >= 80) {
+          frase = "Perigo: RAM está sobrecarregado! Porcentagem de uso: "
+          alertas("Ekran", "RAM", metrica, frase)
+        }
+      }
+      function verificarcpu(metrica) {
+        var frase = ""
+        // incluir uma nova medida de temperatura  
+        if (metrica >= 60 && metrica < 80) {
+          frase = "Alerta: "
+          console.log('Cheguei aqui')
+          alertas("Ekran", "CPU", metrica, frase)
+        } else if (metrica >= 80) {
+          frase = "Perigo: "
+          alertas("Ekran", "CPU", metrica, frase)
+        }
+      }
+
+      function disk() {
+        obterDadosGrafico()
+        function obterDadosGrafico(id) {
+          console.log("Entrei no obter")
+          fetch(`/medidas/ultimaDisco/${id}`, { cache: 'no-store' }).then(function (response) {
+            if (response.ok) {
+              response.json().then(function (resposta) {
+                console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                resposta.reverse();
+                plotarGrafico(resposta);
+              });
+            } else {
+              console.error('Nenhum dado encontrado ou erro na API');
+            }
+          })
+            .catch(function (error) {
+              console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+            });
+        }
+
+
+
+
+        function plotarGrafico(resposta) {
+          console.log("Entrei no plotar")
+          const dados4 = {
+            labels: ['Livre', 'Em Uso'],
+            datasets: [{
+              backgroundColor: ['rgba(29, 248, 160,0.7)', 'rgba(31,142,241,0.7)'],
+              borderColor: ['rgba(29, 248, 160,0.7)', 'rgba(31,142,241,0.7)'],
+              data: [],
+            }]
+          };
+          var registro = resposta[0]
+          console.log(registro.discoPercent)
+          var espacoOcupado = registro.discoPercent
+          dados4.datasets[0].data.push(registro.discoPercent);
+          var contaLivre = 100 - espacoOcupado
+          dados4.datasets[0].data.push(contaLivre)
+
+          const config = {
+            type: 'pie',
+            data: dados4,
+            options: {}
+          };
+          let disco = contaLivre
+          verificardisco(disco)
+
+
+          const myChart = new Chart(
+            document.getElementById('CountryChart1'),
+            config
+          );
+
+        }
+      }
+
+
+
+      let proximaAtualizacao;
+
+      window.onload = disk(), obterDadosGrafico(1);
+      // O gráfico é construído com três funções:
+      // 1. obterDadosGrafico -> Traz dados do Banco de Dados para montar o gráfico da primeira vez
+      // 2. plotarGrafico -> Monta o gráfico com os dados trazidos e exibe em tela
+      // 3. atualizarGrafico -> Atualiza o gráfico, trazendo novamente dados do Banco
+
+      // Esta função *obterDadosGrafico* busca os últimos dados inseridos em tabela de medidas.
+      // para, quando carregar o gráfico da primeira vez, já trazer com vários dados.
+      // A função *obterDadosGrafico* também invoca a função *plotarGrafico*
+
+      //     Se quiser alterar a busca, ajuste as regras de negócio em src/controllers
+      //     Para ajustar o "select", ajuste o comando sql em src/models
+      function obterDadosGrafico(id) {
+
+        if (proximaAtualizacao != undefined) {
+          clearTimeout(proximaAtualizacao);
+        }
+
+        fetch(`/medidas/ultimas/${id}`, { cache: 'no-store' }).then(function (response) {
+          if (response.ok) {
+            response.json().then(function (resposta) {
+              console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+              resposta.reverse();
+              plotarGrafico(resposta);
+            });
+          } else {
+            console.error('Nenhum dado encontrado ou erro na API');
+          }
+        })
+          .catch(function (error) {
+            console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+          });
+      }
+
+      // Esta função *plotarGrafico* usa os dados capturados na função anterior para criar o gráfico
+      // Configura o gráfico (cores, tipo, etc), materializa-o na página e, 
+      // A função *plotarGrafico* também invoca a função *atualizarGrafico*
+      function plotarGrafico(resposta, id) {
+        console.log('iniciando plotagem do gráfico...');
+
+        var dados = {
+          labels: [],
+          datasets: [
+            {
+              yAxisID: 'yAxis',
+              xAxisID: 'xAxis',
+              label: 'Porcentagem de uso da CPU',
+              borderColor: '#D346B1',
+              backgroundColor: 'rgba(211,70,177,0.01)',
+              fill: true,
+              data: []
+            }
+          ]
+
+        };
+
+        var dados2 = {
+          labels: [],
+          datasets: [
+            {
+              yAxisID: 'yAxisRam',
+              xAxisID: 'xAxisRam',
+              label: 'Porcentagem de uso da RAM',
+              borderColor: 'rgba(31,142,241,1)',
+              backgroundColor: 'rgba(31,142,241,0.01)',
+              fill: true,
+              data: []
+            }
+          ]
+        };
+
+        // var dados3 = {
+        //   labels: [],
+        //   datasets: [
+        //     {
+        //       yAxisID: 'yAxisDown',
+        //       xAxisID: 'xAxisDown',
+        //       label: 'Disco Uso',
+        //       borderColor: '#D346B1',
+        //       backgroundColor: 'rgba(211,70,177,0.01)',
+        //       fill: true,
+        //       data: []
+        //     },
+        //     {
+        //       yAxisID: 'yAxisUp',
+        //       xAxisID: 'xAxisUp',
+        //       label: 'Disco Livre',
+        //       borderColor: 'rgba(31,142,241,1)',
+        //       backgroundColor: 'rgba(31,142,241,0.01)',
+        //       fill: true,
+        //       data: []
+        //     }
+        //   ]
+        // };
+
+
+
+        for (i = 0; i < resposta.length; i++) {
+          var registro = resposta[i];
+          dados.labels.push(registro.horarioF);
+          dados.datasets[0].data.push(registro.cpuMedia);
+          dados2.labels.push(registro.horarioF)
+          dados2.datasets[0].data.push(registro.ramUsoPercent)
+          // dados3.labels.push(registro.horarioF)
+          // dados3.datasets[0].data.push(registro.discoUso)
+          // dados3.datasets[1].data.push(registro.discoLivre)
+        }
+
+        console.log(JSON.stringify(dados));
+        console.log(JSON.stringify(dados2));
+
+        // window.lineChart = new Chart(chartBig11, {
+        //   type: 'line',
+        //   data: dados,
+        //         options: {
+        //           responsive: true,
+        //           animation: { duration: 1000 },
+        //           hoverMode: 'index',
+        //           stacked: false,
+        //           title: {
+        //             display: false,
+        //             text: 'Dados capturados'
+        //           },
+        //           legend: {
+        //             display: false
+        //           },
+
+        //           tooltips: {
+        //             backgroundColor: 'rgba(0, 0, 0, 0.703)',
+        //           },
+        //           scales: {
+        //             yAxis: {
+        //               type: 'bar',
+        //               display: true,
+        //               position: 'left',
+        //               beginAtZero: true,
+        //               max: 30,
+        //               min: 0,
+        //                 ticks: {
+        //                 fontColor: 'white',
+        //                 beginAtZero: true,
+        //                 max: 100,
+        //                 min: 0
+        //               }, 
+
+
+        //             },
+        //             xAxes: [{
+        //               ticks: {
+        //                 fontColor: 'white'
+        //               }
+        //             }]
+        //           }
+        //         }
+        //       })
+
+
+
+
+        window.lineChart = new Chart(chartBig11, {
+          type: 'line',
+          data: dados,
+          options: {
+            plugins: {
+              legend: {
+                display: false,
+                labels: {
+                  font: {
+                    size: 70,
+                    weight: "bold",
+                    family: "arial"
+                  }
+                }
+              },
+            },
+            responsive: true,
+            animation: { duration: 1000 },
+            hoverMode: 'index',
+            stacked: false,
+            tooltips: {
+              backgroundColor: 'rgba(0, 0, 0, 0.703)',
+              // colo: 'rgba(29, 248, 160,0.01)',
+            },
+            scales: {
+              yAxis: {
+                beginAtZero: true,
+                max: 100,
+                ticks: {
+                  stepSize: 20,
+                  // color: "rgba(255,255,255,0.6)",
+                }
+              },
+              // xAxis: {
+              //   ticks: {
+              //     color: "rgba(255,255,255,0.6)",
+              //   }
+              // }
+            }
+          }
+        })
+
+        window.lineChart2 = new Chart(chartLinePurple1, {
+          type: 'line',
+          data: dados2,
+          options: {
+            plugins: {
+              legend: {
+                display: false
+              },
+            },
+            responsive: true,
+            animation: { duration: 1000 },
+            hoverMode: 'index',
+            stacked: false,
+            title: {
+              display: false,
+              text: 'Dados capturados'
+            },
+            legend: {
+              display: false
+            },
+
+            // tooltips: {
+            //   // backgroundColor: 'rgba(0, 0, 0, 0.703)',
+            // },
+            scales: {
+              yAxisRam: {
+                beginAtZero: true,
+                max: 100,
+                // ticks: {
+                //   // stepSize: 50,
+                //   color: "rgba(255,255,255,0.6)",
+                // }
+              },
+              // xAxisRam: {
+              //   ticks: {
+              //     color: "",
+              //   }
+              // }
+            }
+          }
+        })
+
+        // window.lineChart3 = new Chart(chartLineGreen1, {
+        //   type: 'line',
+        //   data: dados3,
+        //   options: {
+        //     plugins: {
+        //       legend: {
+        //         display: true
+        //       },
+        //     },
+        //     responsive: true,
+        //     animation: { duration: 1000 },
+        //     hoverMode: 'index',
+        //     stacked: false,
+        //     title: {
+        //       display: false,
+        //       text: 'Dados capturados'
+        //     },
+        //     legend: {
+        //       display: false
+        //     },
+
+        //     tooltips: {
+        //       backgroundColor: 'rgba(0, 0, 0, 0.703)',
+        //     },
+        //     scales: {
+        //       yAxisDown: {
+        //         beginAtZero: true,
+        //         max: 100,
+        //         display: false
+        //       },
+        //       xAxisDown: {
+        //         display: false
+        //       },
+        //       yAxisUp: {
+        //         beginAtZero: true,
+        //         max: 100,
+        //       },
+        //     }
+        //   }
+        // })
+
+        // window.grafico_barra = Chart.Line(ctx, {
+        //   data: dados,
+        //   options: {
+        //     responsive: true,
+        //     animation: { duration: 1000 },
+        //     hoverMode: 'index',
+        //     stacked: false,
+        //     title: {
+        //       display: false,
+        //       text: 'Dados capturados'
+        //     },
+        //     legend: {
+        //       display: false
+        //     },
+
+        //     tooltips: {
+        //       backgroundColor: 'rgba(0, 0, 0, 0.703)',
+        //     },
+        //     scales: {
+        //       yAxes: [{
+        //         type: 'linear',
+        //         display: true,
+        //         position: 'left',
+        //         id: 'y-temperatura',
+        //         ticks: {
+        //           fontColor: 'white',
+        //           beginAtZero: true,
+        //           max: 100,
+        //           min: 0
+        //         },
+
+
+        //       }],
+        //       xAxes: [{
+        //         ticks: {
+        //           fontColor: 'white'
+        //         }
+        //       }]
+        //     }
+        //   }
+        // }); 
+
+        setTimeout(() => atualizarGrafico(id, dados, dados2), 2000);
+      }
+
+
+      // Esta função *atualizarGrafico* atualiza o gráfico que foi renderizado na página,
+      // buscando a última medida inserida em tabela contendo as capturas, 
+
+      //     Se quiser alterar a busca, ajuste as regras de negócio em src/controllers
+      //     Para ajustar o "select", ajuste o comando sql em src/models
+      function atualizarGrafico(id, dados, dados2) {
+        console.log("ENTRANDO NO ATUALIZAR GRAFICO")
+        console.log("---------------------------------")
+        console.log(dados2)
+        console.log("---------------------------------")
+
+
+        fetch(`/medidas/tempo-real/${id}`, { cache: 'no-store' }).then(function (response) {
+          if (response.ok) {
+            response.json().then(function (novoRegistro) {
+
+              console.log(`Dados recebidos: ${JSON.stringify(novoRegistro)}`);
+              console.log(`Dados atuais do gráfico: ${dados}`);
+              console.log(`Dados atuais do gráfico: ${dados2}`);
+
+              // tirando e colocando valores no gráfico
+              dados.labels.shift(); // apagar o primeiro
+              dados.labels.push(novoRegistro[0].horarioF); // incluir um novo momento
+              dados.datasets[0].data.shift();  // apagar o primeiro de temperatura
+              dados.datasets[0].data.push(novoRegistro[0].cpuMedia);
+              let cpu = novoRegistro[0].cpuMedia// incluir uma nova medida de temperatura
+              setInterval(verificarcpu(cpu), 5000)
+              dados2.labels.shift();
+              dados2.labels.push(novoRegistro[0].horarioF);
+              dados2.datasets[0].data.shift();
+              dados2.datasets[0].data.push(novoRegistro[0].ramUsoPercent);
+              let ram = novoRegistro[0].ramUsoPercent
+              setInterval(verificarram(ram), 5000)
+              // dados3.labels.shift();
+              // dados3.labels.push(novoRegistro[0].horarioF);
+              // dados3.datasets[0].data.shift();
+              // dados3.datasets[0].data.push(novoRegistro[0].discoUso);
+              // dados3.datasets[1].data.shift();
+              // dados3.datasets[1].data.push(novoRegistro[0].discoLivre);
+
+
+              /* dados.datasets[0].data.shift(); */  // apagar o primeiro de temperatura
+              /*  dados.datasets[0].data.push(novoRegistro[0].grafico_zonas); */ // incluir uma nova medida de temperatura
+
+              window.lineChart.update();
+              window.lineChart2.update();
+              // window.lineChart3.update();
+
+              // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
+              proximaAtualizacao = setTimeout(() => atualizarGrafico(id, dados, dados2), 2000);
+            });
+          } else {
+            console.error('Nenhum dado encontrado ou erro na API');
+            // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
+          }
+        })
+          .catch(function (error) {
+            console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+          });
+
+      }
+    </script>
+
+
+</body>
+
+</html>

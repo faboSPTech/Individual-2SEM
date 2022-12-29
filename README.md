@@ -1,1 +1,2 @@
-# Individual-2SEM
+# GREENEYE-OFICIAL
+Projeto Oficial Greeneye Sprint

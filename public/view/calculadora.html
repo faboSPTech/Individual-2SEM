@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora | GreenEye</title>
+
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../assets/img/OLHO.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/calStyle.css">
+</head>
+
+<body>
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <h1 class="logo"><a href="index.html"> <span style="color: green;">Green</span>eye</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto" onclick="redireciona('/')">Home</a></li>
+          <li><a class="nav-link scrollto" onclick="redireciona('/')">Sobre nós</a></li>
+          <li><a class="nav-link scrollto" onclick="redireciona('/')">Valores</a></li>
+          <li><a class="nav-link scrollto active " onclick="redireciona('calculadora')">Calculadora</a></li>
+          <li><a class="nav-link scrollto" onclick="redireciona('/')">Equipe</a></li>
+          <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+                <ul>
+                  <li><a href="#">Drop Down 1</a></li>
+                  <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+                    <ul>
+                      <li><a href="#">Deep Drop Down 1</a></li>
+                      <li><a href="#">Deep Drop Down 2</a></li>
+                      <li><a href="#">Deep Drop Down 3</a></li>
+                      <li><a href="#">Deep Drop Down 4</a></li>
+                      <li><a href="#">Deep Drop Down 5</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Drop Down 2</a></li>
+                  <li><a href="#">Drop Down 3</a></li>
+                  <li><a href="#">Drop Down 4</a></li>
+                </ul>
+              </li> -->
+          <li><a class="nav-link scrollto" onclick="redireciona('/')">Contato</a></li>
+          <li><a class="getstarted scrollto" onclick="redireciona('login')">Login</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+
+  <div class="containercalc">
+    <div class="filter">
+      <div class="calc_box">
+        <h3 class="titulo" style="text-align:center;">SIMULADOR</h3>
+        <P>Insira a quantidade física que você possui dos seguintes hardwares:</P>
+        <div class="calc_text">
+          <input id="in_disco" class="calc_inp" placeholder="Disco Rígido" type="text"></p>
+          <input id="in_ram" class="calc_inp" placeholder="Pentes de Memória RAM" type="text"></P>
+          <input id="in_processador" class="calc_inp" placeholder="Processadores" type="text"></P>
+        </div>
+        <button class="calc_btn" onclick="popup(), calcular()">SIMULAR</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="popup-wrapper" onclick="fechar()" id="pw">
+    <div class="popup">
+      <div class="popup-closer" onclick="fechar()" style="color: red; font-size: 35px;">X</div>
+      <div class="popup-content">
+        <p>
+          O nosso sistema visa extrair ao máximo da vida útil do hardware com base no que o próprio fabricante diz, com
+          o nosso sistema enviaremos alertas para fazer a manutenção do componente assim extendendo sua vida útil.
+        </p>
+        Veja a seguir o tempo de vida útil dos hardwares:
+        <div class="inp_results">
+          <p>Disco Rígido: <br> <input class="inp_valor" id="valor1" placeholder="6 Anos" type="text" readonly></p>
+          <p>Memória RAM:<br><input class="inp_valor" id="valor1" type="text" placeholder="10-15 Anos" readonly></p>
+          <p>Processador:<br><input class="inp_valor" id="valor1" type="text" placeholder="14 - 20 Anos" readonly></p>
+          <p>Tempo Médio de Troca:<br><input class="inp_valor" id="valor1" placeholder="4 Anos" type="text" readonly>
+          </p>
+        </div>
+        <p id="resultado">
+          Com nosso sistema em 8 anos você deixaria de comprar X Discos Rígidos, X Memórias RAMS, X Processadores, se
+          baseando nos preços médios de HD (R$ 280,00),PROCESSADOR (R$ 1000,00) E RAM (R$ 250,00) estimamos que você
+          deixaria de perder:
+        </p>
+        <p id="resultado_produto">Sua Economia(Com o preço do produto incluso):<br><input class="inp_valor" id="valor55" type="text" readonly></p> <br>
+
+      </div>
+    </div>
+  </div>
+  <!-- Vendor JS Files -->
+  <script src="../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../assets/js/main.js"></script>
+</body>
+
+</html>
+
+<script>
+  function popup() {
+    pw.style.display = 'flex'
+  }
+
+  function fechar() {
+    pw.style.display = 'none'
+  }
+
+  function calcular() {
+
+    let processador = in_processador.value
+    let ram = in_ram.value
+    let disco = in_disco.value
+    let processador_valor = processador * 1000
+    let ram_valor = ram * 250
+    let disco_valor = disco * 280
+    
+    let economia_total = Number(processador_valor + ram_valor + disco_valor)
+    let plano = 8 * 200
+    resultado.innerHTML = ` Com nosso sistema em 8 anos você deixaria de comprar ${(disco/2).toFixed(0)} Discos Rígidos, ${(ram/2).toFixed(0)} Memórias RAMS, ${(processador/2).toFixed(0)} Processadores, se
+          baseando nos preços médios de HD (R$ 280,00),PROCESSADOR (R$ 1000,00) E RAM (R$ 250,00) estimamos que você deixaria de perder: R$${economia_total}`
+    valor55.placeholder = `R$:${economia_total - plano}`
+    valor55.placeholder.color = 'green'
+  }
+</script>
+
+<script src="../assets/js/redirecionamento.js"></script>

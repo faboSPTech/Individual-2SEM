@@ -1,0 +1,86 @@
+// <script>
+      function alertas(nome,email,id,local,especificacoes,problema,data,NomeResponsavel){ 
+    const options = {  
+    method: 'POST',  
+    headers: {  
+    accept: 'application/json',  
+    Authorization: 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJ1c2VyIjp7ImlkIjozMDIxNjgwMTEsImVtYWlsIjoibHVjYXMubmF2YXNjb25pQHNwdGVjaC5zY2hvb2wiLCJhcHBsaWNhdGlvbiI6MzAwMjA2NDA4fX0.4Bv-Q1A5yF-dz1BrkqU4KTquUMB-ZSIUlJc6HlGb-HJsG0EC6rksPleIyB76rsOqdqJiv77wlQiUR0HA6zSb_w',  
+    'content-type': 'application/json'  
+    },  
+    
+    body: JSON.stringify({  
+    query: `mutation { createCard(input: {pipe_id:302716733,title: "Card",fields_attributes:[{field_id: "requester_name", field_value: "${nome}"},
+    {field_id: "email_solicitante", field_value: "${email}"},{field_id: "device", field_value: "${id}"},
+    {field_id: "local", field_value: "${local}"},{field_id: "especifica_es", field_value: "${especificacoes}"},
+    {field_id: "problem_description", field_value: "${problema}"},{field_id: "data_de_vencimento", field_value: "${data}"},
+    {field_id: "nome_respons_vel", field_value: "${NomeResponsavel}"}]}) {card{title}}}`  
+    })  
+    };  
+    fetch('https://api.pipefy.com/graphql', options)  
+    .then(response => response.json())  
+    .then(response => console.log(response))  
+    .catch(err => console.error(err));  
+    }  
+    
+    alertas("lucas","lucasnavasconi@hotmail.com","1","Sptech","aaa","problem na ram do pc","18-10","Nathalia")
+    
+
+    function ram(metrica){  
+    var frase= ""  
+    // incluir uma nova medida de temperatura  
+    if(metrica>=70 && metrica <79){  
+    frase = "Alerta: "  
+    console.log('Cheguei aqui')  
+    alertas("HealthSystem","RAM",metrica, frase)  
+    } else if(metrica >=80 && metrica<89){  
+    frase = "Emergencia: "  
+    alertas("HealthSystem", "RAM", metrica, frase)  
+    } else if(metrica >=90 && metrica <100){  
+    frase = "Critico: "  
+    alertas("HealthSystem", "RAM", metrica, frase)  
+    }  
+    } 
+
+
+    function cpu(metrica){  
+    var frase= ""  
+    // incluir uma nova medida de temperatura  
+    if(metrica>=65 && metrica <75){  
+    frase = "Alerta: "  
+    console.log('Cheguei aqui')  
+    alertas("HealthSystem","CPU",metrica, frase)  
+    } else if(metrica >=76 && metrica<85){  
+    frase = "Emergencia: "  
+    alertas("HealthSystem", "CPU", metrica, frase)  
+    } else if(metrica >=86 && metrica <100){  
+    frase = "Critico: "  
+    alertas("HealthSystem", "CPU", metrica, frase)  
+    }  
+    } 
+
+    function disco(metrica){  
+    var frase= ""  
+    // incluir uma nova medida de temperatura  
+    if(metrica>=80 && metrica <89){  
+    frase = "Alerta: "  
+    console.log('Cheguei aqui')  
+    alertas("HealthSystem","DISCO",metrica, frase)  
+    } else if(metrica >=90 && metrica<94){  
+    frase = "Emergencia: "  
+    alertas("HealthSystem", "DISCO", metrica, frase)  
+    } else if(metrica >=95 && metrica <100){  
+    frase = "Critico: "  
+    alertas("HealthSystem", "DISCO", metrica, frase)  
+    }  
+    }  
+
+    let dadoscpu = novoRegistro[0].cpuPercent 
+    
+      let dadosram = novoRegistro[0].ramPercent 
+    
+      let dadosdisco = novoRegistro[0].discoPercent 
+
+      ram(dadosram) 
+      cpu(dadoscpu) 
+      disco(dadosdisco) 
+      </script>
